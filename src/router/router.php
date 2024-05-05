@@ -18,7 +18,7 @@ class Router
     {
         $method = $_SERVER['REQUEST_METHOD'];
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-        $base_path = '/test/public';
+        $base_path = '/PHP_RestAPI/public';
         $uri = substr($uri, strlen($base_path));
         foreach ($this->routes[$method] as $path => $callback) {
             if ($path === $uri) {
